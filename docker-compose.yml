@@ -1,0 +1,473 @@
+---
+version: '3'
+services:
+  postgres-sso:
+    container_name: postgres-sso
+    image: postgres:12-alpine
+    ports:
+      - "${SSO_DB_PORT}:${SSO_DB_PORT}"
+    expose:
+      - ${SSO_DB_PORT}
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=${DB_DATA}
+    command: -p ${SSO_DB_PORT}
+    volumes:
+      - ./postgres-sso:${DB_DATA}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    restart: always
+
+  sso-service:
+    container_name: sso-service
+    image: ${SSO_IMAGE}
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://${DISCOVERY_USER}:${DISCOVERY_PASSWORD}@discovery-server:${DISCOVERY_PORT}/eureka
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-sso:${SSO_DB_PORT}/postgres
+      - SPRING_KAFKA_BOOTSTRAP-SERVERS=broker:${KAFKA_PORT}
+      - TZ=Asia/Ho_Chi_Minh
+    depends_on:
+      - postgres-sso
+      - discovery-server
+      - api-gateway
+      - broker
+    restart: always
+
+  postgres-news:
+    container_name: postgres-news
+    image: postgres:12-alpine
+    ports:
+      - "${NEWS_DB_PORT}:${NEWS_DB_PORT}"
+    expose:
+      - ${NEWS_DB_PORT}
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=${DB_DATA}
+    command: -p ${NEWS_DB_PORT}
+    volumes:
+      - ./postgres-news:${DB_DATA}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    restart: always
+
+  news-service:
+    container_name: news-service
+    image: ${NEWS_IMAGE}
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://${DISCOVERY_USER}:${DISCOVERY_PASSWORD}@discovery-server:${DISCOVERY_PORT}/eureka
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-news:${NEWS_DB_PORT}/postgres
+      - SPRING_KAFKA_BOOTSTRAP-SERVERS=broker:${KAFKA_PORT}
+      - TZ=Asia/Ho_Chi_Minh
+    depends_on:
+      - postgres-news
+      - discovery-server
+      - api-gateway
+      - broker
+    restart: always
+
+  postgres-contact:
+    container_name: postgres-contact
+    image: postgres:12-alpine
+    ports:
+      - "${CONTACT_DB_PORT}:${CONTACT_DB_PORT}"
+    expose:
+      - ${CONTACT_DB_PORT}
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=${DB_DATA}
+    command: -p ${CONTACT_DB_PORT}
+    volumes:
+      - ./postgres-contact:${DB_DATA}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    restart: always
+
+  contact-service:
+    container_name: contact-service
+    image: ${CONTACT_IMAGE}
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://${DISCOVERY_USER}:${DISCOVERY_PASSWORD}@discovery-server:${DISCOVERY_PORT}/eureka
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-contact:${CONTACT_DB_PORT}/postgres
+      - SPRING_KAFKA_BOOTSTRAP-SERVERS=broker:${KAFKA_PORT}
+      - TZ=Asia/Ho_Chi_Minh
+    depends_on:
+      - postgres-contact
+      - discovery-server
+      - api-gateway
+      - broker
+
+  postgres-document:
+    container_name: postgres-document
+    image: postgres:12-alpine
+    ports:
+      - "${DOCUMENT_DB_PORT}:${DOCUMENT_DB_PORT}"
+    expose:
+      - ${DOCUMENT_DB_PORT}
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=${DB_DATA}
+    command: -p ${DOCUMENT_DB_PORT}
+    volumes:
+      - ./postgres-document:${DB_DATA}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    restart: always
+
+  document-service:
+    container_name: document-service
+    image: ${DOCUMENT_IMAGE}
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://${DISCOVERY_USER}:${DISCOVERY_PASSWORD}@discovery-server:${DISCOVERY_PORT}/eureka
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-document:${DOCUMENT_DB_PORT}/postgres
+      - SPRING_KAFKA_BOOTSTRAP-SERVERS=broker:${KAFKA_PORT}
+      - TZ=Asia/Ho_Chi_Minh
+    depends_on:
+      - postgres-document
+      - discovery-server
+      - api-gateway
+      - broker
+    restart: always
+
+  postgres-announcement:
+    container_name: postgres-announcement
+    image: postgres:12-alpine
+    ports:
+      - "${ANNOUNCEMENT_DB_PORT}:${ANNOUNCEMENT_DB_PORT}"
+    expose:
+      - ${ANNOUNCEMENT_DB_PORT}
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=${DB_DATA}
+    command: -p ${ANNOUNCEMENT_DB_PORT}
+    volumes:
+      - ./postgres-announcement:${DB_DATA}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    restart: always
+
+  announcement-service:
+    container_name: announcement-service
+    image: ${ANNOUNCEMENT_IMAGE}
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://${DISCOVERY_USER}:${DISCOVERY_PASSWORD}@discovery-server:${DISCOVERY_PORT}/eureka
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-announcement:${ANNOUNCEMENT_DB_PORT}/postgres
+      - SPRING_KAFKA_BOOTSTRAP-SERVERS=broker:${KAFKA_PORT}
+      - TZ=Asia/Ho_Chi_Minh
+    depends_on:
+      - postgres-announcement
+      - discovery-server
+      - api-gateway
+      - broker
+    restart: always
+
+  postgres-support:
+    container_name: postgres-support
+    image: postgres:12-alpine
+    ports:
+      - "${SUPPORT_DB_PORT}:${SUPPORT_DB_PORT}"
+    expose:
+      - ${SUPPORT_DB_PORT}
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=${DB_DATA}
+    command: -p ${SUPPORT_DB_PORT}
+    volumes:
+      - ./postgres-support:${DB_DATA}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    restart: always
+
+  support-service:
+    container_name: support-service
+    image: ${SUPPORT_IMAGE}
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://${DISCOVERY_USER}:${DISCOVERY_PASSWORD}@discovery-server:${DISCOVERY_PORT}/eureka
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-support:${SUPPORT_DB_PORT}/postgres
+      - SPRING_KAFKA_BOOTSTRAP-SERVERS=broker:${KAFKA_PORT}
+      - TZ=Asia/Ho_Chi_Minh
+    depends_on:
+      - postgres-support
+      - discovery-server
+      - api-gateway
+      - broker
+    restart: always
+
+  postgres-file:
+    container_name: postgres-file
+    image: postgres:12-alpine
+    restart: always
+    ports:
+      - "${FILE_DB_PORT}:${FILE_DB_PORT}"
+    command: -p ${FILE_DB_PORT}
+    volumes:
+      - ./postgres-file:${DB_DATA}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=${DB_DATA}
+
+  file-service:
+    container_name: file-service
+    image: ${FILE_IMAGE}
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - FILE_STORAGE_PATH=/home/uploads
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://${DISCOVERY_USER}:${DISCOVERY_PASSWORD}@discovery-server:${DISCOVERY_PORT}/eureka
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - SPRING_KAFKA_BOOTSTRAP-SERVERS=broker:${KAFKA_PORT}
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-file:${FILE_DB_PORT}/postgres
+      - TZ=Asia/Ho_Chi_Minh
+    volumes:
+      - ${FILE_DIR}:/home/uploads
+    depends_on:
+      - postgres-file
+      - api-gateway
+      - discovery-server
+    restart: always
+
+  postgres-form:
+    container_name: postgres-form
+    image: postgres:12-alpine
+    restart: always
+    ports:
+      - "${FORM_DB_PORT}:${FORM_DB_PORT}"
+    command: -p ${FORM_DB_PORT}
+    volumes:
+      - ./postgres-form:${DB_DATA}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=${DB_DATA}
+
+  form-service:
+    container_name: form-service
+    image: ${FORM_IMAGE}
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://${DISCOVERY_USER}:${DISCOVERY_PASSWORD}@discovery-server:${DISCOVERY_PORT}/eureka
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - SPRING_KAFKA_BOOTSTRAP-SERVERS=broker:${KAFKA_PORT}
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-form:${FORM_DB_PORT}/postgres
+      - TZ=Asia/Ho_Chi_Minh
+    depends_on:
+      - postgres-form
+      - api-gateway
+      - discovery-server
+    restart: always
+
+  postgres-billing:
+    container_name: postgres-billing
+    image: postgres:12-alpine
+    restart: always
+    ports:
+      - "${BILLING_DB_PORT}:${BILLING_DB_PORT}"
+    command: -p ${BILLING_DB_PORT}
+    volumes:
+      - ./postgres-billing:${DB_DATA}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=${DB_DATA}
+
+  billing-service:
+    container_name: billing-service
+    image: ${BILLING_IMAGE}
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://${DISCOVERY_USER}:${DISCOVERY_PASSWORD}@discovery-server:${DISCOVERY_PORT}/eureka
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-billing:${BILLING_DB_PORT}/postgres
+      - SPRING_KAFKA_BOOTSTRAP-SERVERS=broker:${KAFKA_PORT}
+      - TZ=Asia/Ho_Chi_Minh
+    depends_on:
+      - postgres-billing
+      - api-gateway
+      - discovery-server
+    restart: always
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.3.0
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    restart: always
+    user: "0:0"
+    volumes:
+      - ./zookeeper-data:/var/lib/zookeeper/data
+      - ./.zookeeper-logs:/var/lib/zookeeper/log
+
+  broker:
+    image: confluentinc/cp-kafka:7.3.0
+    container_name: broker
+    ports:
+      - 9092:9092
+    expose:
+      - 9092
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+      KAFKA_LISTENER: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_INTERNAL://broker:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://broker:29092
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+    restart: always
+    user: "0:0"
+    volumes:
+      - ./.kafka-logs:/logs
+      - ./kafka-data:/var/lib/kafka/data
+
+  discovery-server:
+    image: ${DISCOVERY_IMAGE}
+    container_name: discovery-server
+    ports:
+      - "${DISCOVERY_PORT}:${DISCOVERY_PORT}"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - EUREKA_USERNAME=${DISCOVERY_USER}
+      - EUREKA_PASSWORD=${DISCOVERY_PASSWORD}
+      - TZ=Asia/Ho_Chi_Minh
+    restart: always
+
+  api-gateway:
+    image: ${GATEWAY_IMAGE}
+    container_name: api-gateway
+    ports:
+      - "${API_GATEWAY_PORT}:8080"
+    expose:
+      - ${API_GATEWAY_PORT}
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY=TRACE
+      - TZ=Asia/Ho_Chi_Minh
+    depends_on:
+      - discovery-server
+    restart: always
+
+  redis:
+    container_name: redis
+    image: redis:latest
+    ports:
+      - "${REDIS_PORT}:${REDIS_PORT}"
+    volumes:
+      - ./redis-data:/data
+
+  postgres-iot:
+    container_name: postgres-iot
+    image: postgres:12-alpine
+    restart: always
+    ports:
+      - "${IOT_DB_PORT}:${IOT_DB_PORT}"
+    command: -p ${IOT_DB_PORT}
+    volumes:
+      - ./postgres-iot:${DB_DATA}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=${DB_DATA}
+
+  iot-service:
+    container_name: iot-service
+    image: ${IOT_IMAGE}
+    environment:
+      - NODE_ENV=prod
+      - PORT=8080
+      - CLOUD_URI=${CLOUD_URI}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_USER=${DB_USER}
+      - DATABASE_PASSWORD=${DB_PASSWORD}
+      - DATABASE_HOST=postgres-iot
+      - DATABASE_PORT=${IOT_DB_PORT}
+      - SYSADMIN_USERNAME=${SYSADMIN_USERNAME}
+      - SYSADMIN_PASSWORD=${SYSADMIN_PASSWORD}
+      - EUREKA_HOST=discovery-server
+      - EUREKA_PORT=${DISCOVERY_PORT}
+      - EUREKA_USER=${DISCOVERY_USER}
+      - EUREKA_PASSWORD=${DISCOVERY_PASSWORD}
+      - EUREKA_PATH=/eureka/apps
+      - IMOU_URI=${IMOU_URI}
+      - IMOU_APP_ID=${IMOU_APP_ID}
+      - IMOU_APP_SECRET=${IMOU_APP_SECRET}
+      - REDIS_HOST=redis
+      - REDIS_PORT=${REDIS_PORT}
+      - KAFKA_SERVER=broker:${KAFKA_PORT}
+      - KAFKA_CONSUMER_GROUPID=userTopicId
+      - KAFKA_CONSUMER_TOPIC=saveUserTopic
+      - TZ=Asia/Ho_Chi_Minh
+    volumes:
+      - ./.ipm-cloud-logs:/var/log/ipm
+    depends_on:
+      - redis
+      - postgres-iot
+      - api-gateway
+      - discovery-server

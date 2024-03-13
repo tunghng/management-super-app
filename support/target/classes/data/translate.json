@@ -1,0 +1,32 @@
+{
+  "vi-VN": {
+    "code": "Mã",
+    "title": "Tiêu đề",
+    "contactName": "Tên liên hệ",
+    "state": "Trạng thái",
+    "type": "Loại",
+    "description": "Mô tả",
+    "createdAt": "Thời gian tạo",
+    "closedAt": "Thời gian đóng",
+    "closedBy": "Tài khoản đóng",
+    "reviewTitle": "Đánh giá",
+    "reviewBody": "Nội dung đánh giá",
+    "fromTo": "Thời gian",
+    "totalResult": "Số kết quả"
+  },
+  "en-US": {
+    "code": "Code",
+    "title": "Title",
+    "contactName": "Contact name",
+    "state": "State",
+    "type": "Type",
+    "description": "Description",
+    "createdAt": "Created at",
+    "closedAt": "Closed at",
+    "closedBy": "Closed by",
+    "reviewTitle": "Review title",
+    "reviewBody": "Review body",
+    "fromTo": "From - to",
+    "totalResult": "Total result"
+  }
+}

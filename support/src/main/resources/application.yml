@@ -1,0 +1,41 @@
+server:
+  port: 8007
+
+spring:
+  application:
+    name: support-service
+  cloud:
+    discovery:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5430/support_service
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  main:
+    allow-circular-references: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    template:
+      user-topic: saveUserTopic
+      contact-topic: saveContactTopic
+    consumer:
+      user-group-id: userTopicId
+      contact-group-id: contactTopicId
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:password@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    hostname: localhost

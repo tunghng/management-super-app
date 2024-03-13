@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.im.filestorageservice.MainApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.107 s <<< FAILURE! - in com.im.filestorageservice.MainApplicationTests
+com.im.filestorageservice.MainApplicationTests  Time elapsed: 0.107 s  <<< ERROR!
+java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+

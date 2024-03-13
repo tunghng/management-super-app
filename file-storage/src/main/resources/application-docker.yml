@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    config:
+      profile: docker
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+file:
+  storage:
+    path: /uploads

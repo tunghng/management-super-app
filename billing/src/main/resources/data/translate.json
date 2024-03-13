@@ -1,0 +1,30 @@
+{
+  "vi-VN": {
+    "code": "Mã hoá đơn",
+    "title": "Tiêu đề",
+    "contactName": "Tên liên hệ",
+    "state": "Trạng thái",
+    "price": "Giá tiền",
+    "type": "Loại",
+    "createdAt": "Thời gian tạo",
+    "dueDate": "Thời hạn trả",
+    "closedAt": "Thời gian đóng",
+    "closedBy": "Tài khoản đóng",
+    "fromTo": "Thời gian",
+    "totalResult": "Số kết quả"
+  },
+  "en-US": {
+    "code": "Code",
+    "title": "Title",
+    "contactName": "Contact name",
+    "state": "State",
+    "price": "Price",
+    "type": "Type",
+    "createdAt": "Created at",
+    "dueDate": "Due date",
+    "closedAt": "Closed at",
+    "closedBy": "Closed by",
+    "fromTo": "From - to",
+    "totalResult": "Total result"
+  }
+}

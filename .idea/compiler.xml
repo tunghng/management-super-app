@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="notification" />
+        <module name="form" />
+        <module name="discovery" />
+        <module name="gateway" />
+      </profile>
+      <profile name="Annotation profile for backend" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
+        </processorPath>
+        <module name="news" />
+        <module name="contact" />
+        <module name="document" />
+        <module name="support" />
+        <module name="billing" />
+        <module name="file-storage" />
+        <module name="announcement" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="announcement" target="11" />
+      <module name="backend" target="17" />
+      <module name="billing" target="11" />
+      <module name="contact" target="11" />
+      <module name="discovery" target="17" />
+      <module name="document" target="11" />
+      <module name="file-storage" target="11" />
+      <module name="form" target="17" />
+      <module name="gateway" target="17" />
+      <module name="news" target="11" />
+      <module name="notification" target="17" />
+      <module name="sso" target="11" />
+      <module name="support" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="announcement" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="billing" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="contact" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="discovery" options="-parameters" />
+      <module name="document" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="file-storage" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="form" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="news" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="notification" options="-parameters" />
+      <module name="sso" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="support" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+    </option>
+  </component>
+</project>

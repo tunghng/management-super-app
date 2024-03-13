@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.12</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.im</groupId>
+    <artifactId>backend</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>backend</name>
+    <description>Industrial Park Management Backend</description>
+
+    <modules>
+        <module>discovery-server</module>
+        <module>api-gateway</module>
+        <module>sso</module>
+        <module>contact</module>
+        <module>file-storage</module>
+        <module>news</module>
+        <module>support</module>
+        <module>document</module>
+        <module>announcement</module>
+        <module>form</module>
+        <module>billing</module>
+        <module>notification</module>
+    </modules>
+    <properties>
+        <java.version>17</java.version>
+        <spring-cloud.version>2021.0.5</spring-cloud.version>
+        <jib-maven-plugin.version>3.0.0</jib-maven-plugin.version>
+        <announcement.version>1.1.5</announcement.version>
+        <billing.version>1.1.6</billing.version>
+        <contact.version>1.0.7</contact.version>
+        <discovery-server.version>1.0.1</discovery-server.version>
+        <document.version>1.1.4</document.version>
+        <file-storage.version>1.1.1</file-storage.version>
+        <form.version>1.2.8</form.version>
+        <news.version>1.1.6</news.version>
+        <sso.version>2.1.6</sso.version>
+        <support.version>2.1.2</support.version>
+        <api-gateway.version>2.0.0</api-gateway.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>${jib-maven-plugin.version}</version>
+                <configuration>
+                    <from>
+                        <image>openjdk:17-jdk-slim</image>
+                    </from>
+                    <to>
+                        <image>registry.hub.docker.com/ttqteo/im-${project.artifactId}:${project.version}</image>
+                    </to>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>netflix-candidates</id>
+            <name>Netflix Candidates</name>
+            <url>https://artifactory-oss.prod.netflix.net/artifactory/maven-oss-candidates</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+</project>

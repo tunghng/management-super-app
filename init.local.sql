@@ -1,0 +1,10 @@
+CREATE DATABASE sso_service;
+CREATE DATABASE contact_service;
+CREATE DATABASE announcement_service;
+CREATE DATABASE document_service;
+CREATE DATABASE file_storage_service;
+CREATE DATABASE news_service;
+CREATE DATABASE support_service;
+CREATE DATABASE form_service;
+CREATE DATABASE billing_service;
+CREATE DATABASE cloud_service;

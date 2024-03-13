@@ -1,0 +1,62 @@
+{
+  "sheetName": {
+    "vi-VN": "Công ty",
+    "en-US": "Contact"
+  },
+  "description1": {
+    "vi-VN": "Số công ty",
+    "en-US": "Total contacts"
+  },
+  "description2": {
+    "vi-VN": "Thời gian",
+    "en-US": "From - To"
+  },
+  "id": {
+    "vi-VN": "ID",
+    "en-US": "ID"
+  },
+  "name": {
+    "vi-VN": "Công ty",
+    "en-US": "Name"
+  },
+  "taxNumber": {
+    "vi-VN": "Mã số thuế",
+    "en-US": "Tax number"
+  },
+  "email": {
+    "vi-VN": "Email",
+    "en-US": "Email"
+  },
+  "phone": {
+    "vi-VN": "Số điện thoại",
+    "en-US": "Phone"
+  },
+  "field": {
+    "vi-VN": "Lĩnh vực",
+    "en-US": "Field"
+  },
+  "description": {
+    "vi-VN": "Mô tả",
+    "en-US": "Description"
+  },
+  "tenantId": {
+    "vi-VN": "Mã doanh nghiệp",
+    "en-US": "Tenant Id"
+  },
+  "createdAt": {
+    "vi-VN": "Thời gian tạo",
+    "en-US": "Created At"
+  },
+  "updatedAt": {
+    "vi-VN": "Thời gian cập nhật",
+    "en-US": "Updated At"
+  },
+  "avatar": {
+    "vi-VN": "Ảnh đại diện",
+    "en-US": "Avatar"
+  },
+  "isDeleted": {
+    "vi-VN": "Đã xóa",
+    "en-US": "Is Deleted"
+  }
+}

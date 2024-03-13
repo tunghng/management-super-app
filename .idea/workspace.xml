@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="65857993-b0ca-43ac-a121-db77b3e1e8a4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/contact/target/contact-1.0.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/target/contact-1.0.6.jar.original" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="feat/multi-module" />
+                <branch-info repo="$PROJECT_DIR$" source="feat/IPM-monitoringService" />
+                <branch-info repo="$PROJECT_DIR$" source="feat/IPM-577" />
+                <branch-info repo="$PROJECT_DIR$" source="bugfix/IPM-lowerCaseDbFunction" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feat/multi-module" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/billing/src/main/java/com/im/billing/dto/mapper/PaymentMethodMapper.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/billing/src/main/java/com/im/billing/service/BillServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/document/pom.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/sso/src/main/java/com/im/sso/service/UserServiceImpl.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2SmqVfTRlgKKJw6QzxFG2gN45ZC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelOrder2&quot;: &quot;2&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth2&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/htungg/Documents/ipm-be-spring&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e3a1762c204cc10af2c9616cb22182a8&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/monitoring/src/main/resources" />
+      <recent name="$PROJECT_DIR$/monitoring2/src/main/java/com/im/monitoring2" />
+      <recent name="$PROJECT_DIR$/monitoring2" />
+      <recent name="$PROJECT_DIR$/monitoring/src" />
+      <recent name="$PROJECT_DIR$/monitoring/src/main/java/com/example/monitoring/service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sso/src/main/resources/db" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.im.monitoring" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.monitoring.controller" />
+      <recent name="com.example.monitoring.kafka" />
+      <recent name="com.example.monitoring.repository" />
+      <recent name="com.im.news.kafka" />
+      <recent name="com.im.form.kafka" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.NotificationApplication">
+    <configuration name="CommonLibraryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.commonlibrary.CommonLibraryApplication" />
+      <module name="common-library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.commonlibrary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonitoringApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="monitoring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.monitoring.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.monitoring" />
+      <option name="MAIN_CLASS_NAME" value="com.example.monitoring.MonitoringApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ipm-be-spring" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ipm-be-spring" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnnouncementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="announcement" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.announcement.AnnouncementApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BillingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="billing" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.billing.BillingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonLibraryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="common-library" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.commonlibrary.CommonLibraryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="contact" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.contact.ContactApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DocumentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="document" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.document.DocumentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileStorageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="file-storage" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.filestorage.FileStorageApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FormApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="form" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.form.FormApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="library" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.library.LibraryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Monitoring2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="monitoring" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.monitoring2.Monitoring2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonitoringApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="monitoring (2)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.monitoring.MonitoringApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonitoringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="monitoring" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.monitoring.MonitoringApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonitoringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="monitoring" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.monitoring.MonitoringApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NewsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="news" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.news.NewsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="notification" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.notification.NotificationApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.im.notification.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SsoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="sso" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.sso.SsoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SupportApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="support" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.support.SupportApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.im.support.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.SupportApplication" />
+        <item itemvalue="Spring Boot.NotificationApplication" />
+        <item itemvalue="JUnit.MonitoringApplicationTests" />
+        <item itemvalue="Application.CommonLibraryApplication" />
+        <item itemvalue="Spring Boot.SupportApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="65857993-b0ca-43ac-a121-db77b3e1e8a4" name="Changes" comment="" />
+      <created>1689762130571</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689762130571</updated>
+      <workItem from="1689762135364" duration="1904000" />
+      <workItem from="1689780065458" duration="661000" />
+      <workItem from="1689780993803" duration="45793000" />
+      <workItem from="1689927220241" duration="24726000" />
+      <workItem from="1690125962025" duration="2638000" />
+      <workItem from="1690164894475" duration="90827000" />
+      <workItem from="1690525197444" duration="9673000" />
+      <workItem from="1690688772726" duration="717000" />
+      <workItem from="1690689503712" duration="11803000" />
+      <workItem from="1690821442329" duration="4000" />
+      <workItem from="1690822584371" duration="45322000" />
+      <workItem from="1691051718811" duration="459000" />
+      <workItem from="1691124408723" duration="3928000" />
+      <workItem from="1691380400492" duration="2168000" />
+      <workItem from="1691384154576" duration="12040000" />
+      <workItem from="1691399505667" duration="26110000" />
+      <workItem from="1691489769415" duration="603000" />
+      <workItem from="1691551562671" duration="20621000" />
+      <workItem from="1691979524620" duration="8659000" />
+      <workItem from="1692082468137" duration="23000" />
+      <workItem from="1692088318920" duration="14195000" />
+      <workItem from="1692185137943" duration="17078000" />
+      <workItem from="1692437797262" duration="18759000" />
+      <workItem from="1692601585607" duration="10116000" />
+      <workItem from="1692676458999" duration="5941000" />
+      <workItem from="1692848412297" duration="41000" />
+      <workItem from="1692848477447" duration="58000" />
+      <workItem from="1692850657569" duration="8113000" />
+      <workItem from="1693130458326" duration="599000" />
+      <workItem from="1693210571234" duration="675000" />
+      <workItem from="1693211262562" duration="7143000" />
+      <workItem from="1693622228858" duration="7000" />
+      <workItem from="1693903963845" duration="5669000" />
+      <workItem from="1693974069129" duration="15343000" />
+      <workItem from="1694229399995" duration="4647000" />
+      <workItem from="1694330614007" duration="9038000" />
+      <workItem from="1694410477178" duration="3066000" />
+      <workItem from="1695634971377" duration="599000" />
+      <workItem from="1695811525459" duration="43000" />
+      <workItem from="1696308107750" duration="597000" />
+      <workItem from="1696560345677" duration="2453000" />
+      <workItem from="1698202890812" duration="77000" />
+      <workItem from="1698244518280" duration="620000" />
+      <workItem from="1698748353694" duration="1539000" />
+      <workItem from="1700798647629" duration="1000" />
+      <workItem from="1701839381586" duration="604000" />
+      <workItem from="1702521531439" duration="149000" />
+      <workItem from="1702538336438" duration="1584000" />
+      <workItem from="1702880877187" duration="9076000" />
+      <workItem from="1702957154655" duration="5761000" />
+      <workItem from="1703066951892" duration="1535000" />
+      <workItem from="1703082292113" duration="4000" />
+      <workItem from="1703396832335" duration="420000" />
+      <workItem from="1703397720165" duration="7848000" />
+      <workItem from="1704208676663" duration="4000" />
+      <workItem from="1704263715893" duration="24000" />
+      <workItem from="1704336652362" duration="714000" />
+      <workItem from="1704365365671" duration="180000" />
+      <workItem from="1705157541300" duration="3195000" />
+      <workItem from="1705567693799" duration="6000" />
+      <workItem from="1706067432071" duration="635000" />
+      <workItem from="1709025272815" duration="901000" />
+      <workItem from="1709193060515" duration="22000" />
+      <workItem from="1709202812384" duration="1782000" />
+      <workItem from="1709277545002" duration="789000" />
+      <workItem from="1709313679195" duration="598000" />
+      <workItem from="1709524994777" duration="893000" />
+      <workItem from="1709537631594" duration="4591000" />
+      <workItem from="1709546837353" duration="601000" />
+      <workItem from="1710070613669" duration="109000" />
+      <workItem from="1710216786632" duration="7000" />
+      <workItem from="1710299761336" duration="1008000" />
+      <workItem from="1710300855000" duration="37000" />
+      <workItem from="1710301781102" duration="644000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/news/src/main/java/com/im/news/controller/NewsController.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

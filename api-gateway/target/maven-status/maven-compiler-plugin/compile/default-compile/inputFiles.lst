@@ -1,0 +1,12 @@
+/Users/htungg/Documents/ipm-be-spring/api-gateway/src/main/java/com/im/apigateway/config/GatewayRouteConfig.java
+/Users/htungg/Documents/ipm-be-spring/api-gateway/src/main/java/com/im/apigateway/filter/JwtAuthenticationFilter.java
+/Users/htungg/Documents/ipm-be-spring/api-gateway/src/main/java/com/im/apigateway/config/SwaggerConfig.java
+/Users/htungg/Documents/ipm-be-spring/api-gateway/src/main/java/com/im/apigateway/exception/UnAuthorizedException.java
+/Users/htungg/Documents/ipm-be-spring/api-gateway/src/main/java/com/im/apigateway/util/JwtUtil.java
+/Users/htungg/Documents/ipm-be-spring/api-gateway/src/main/java/com/im/apigateway/ApiGatewayApplication.java
+/Users/htungg/Documents/ipm-be-spring/api-gateway/src/main/java/com/im/apigateway/exception/JwtTokenMissingException.java
+/Users/htungg/Documents/ipm-be-spring/api-gateway/src/main/java/com/im/apigateway/config/WebClientConfig.java
+/Users/htungg/Documents/ipm-be-spring/api-gateway/src/main/java/com/im/apigateway/exception/GlobalErrorAttributes.java
+/Users/htungg/Documents/ipm-be-spring/api-gateway/src/main/java/com/im/apigateway/exception/JwtTokenMalformedException.java
+/Users/htungg/Documents/ipm-be-spring/api-gateway/src/main/java/com/im/apigateway/exception/GlobalErrorWebExceptionHandler.java
+/Users/htungg/Documents/ipm-be-spring/api-gateway/src/main/java/com/im/apigateway/enums/ErrorAttributesKey.java

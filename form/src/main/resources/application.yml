@@ -1,0 +1,44 @@
+server:
+  port: 8009
+
+spring:
+  application:
+    name: form-service
+  cloud:
+    discovery:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5430/form_service
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  main:
+    allow-circular-references: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    template:
+      default-topic: editFileInfoTopic
+    consumer:
+      user-group-id: userTopicId
+      contact-group-id: contactTopicId
+
+springdoc:
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:password@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
